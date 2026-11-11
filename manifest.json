@@ -1,0 +1,36 @@
+{
+  "name": "C3C UFC Utility",
+  "version": "2.1.0",
+  "description": "Import and export Facebook session (UFC) data. By Allou Mohamed.",
+  "permissions": [
+    "cookies",
+    "clipboardRead"
+  ],
+  "host_permissions": [
+    "https://*.facebook.com/"
+  ],
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "assets/logo/16.png",
+      "32": "assets/logo/32.png",
+      "48": "assets/logo/48.png",
+      "64": "assets/logo/64.png",
+      "128": "assets/logo/128.png"
+    }
+  },
+  "icons": {
+    "16": "assets/logo/16.png",
+    "32": "assets/logo/32.png",
+    "48": "assets/logo/48.png",
+    "64": "assets/logo/64.png",
+    "128": "assets/logo/128.png"
+  },
+  "manifest_version": 3,
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "appstate-utility@allou-mohamed"
+    }
+  },
+  "author": "Allou Mohamed"
+}

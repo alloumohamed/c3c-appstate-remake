@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>UFC Utility</title>
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+<div class="app">
+  <header class="bar">
+    <img class="logo" src="assets/logo/64.png" alt="">
+    <div class="ttl"><h1>UFC Utility</h1><p>by Allou Mohamed</p></div>
+    <button id="about" class="ib dk" title="About" aria-label="About"><i data-i="info"></i></button>
+    <button id="more" class="ib mb" aria-label="More"><i data-i="more"></i></button>
+  </header>
+  <nav class="act" aria-label="Actions">
+    <button id="imp" class="pri big" title="Import (Ctrl+Enter)"><i data-i="in"></i><span>Import</span></button>
+    <button id="exp" class="tone big" title="Export"><i data-i="out"></i><span>Export</span><i data-i="chev" class="dk"></i></button>
+    <i class="sep dk"></i>
+    <button id="pst" class="sm" title="Paste from clipboard"><i data-i="paste"></i><span class="l">Paste</span></button>
+    <button id="cpy" class="sm" title="Copy to clipboard"><i data-i="copy"></i><span class="l">Copy</span></button>
+    <button id="sav" class="sm" title="Save to file"><i data-i="save"></i><span class="l">Save</span></button>
+    <button id="clr" class="sm" title="Clear"><i data-i="x"></i><span class="l">Clear</span></button>
+    <button id="lo" class="sm lo dk" title="Soft logout (delete local UFC data)"><i data-i="trash"></i></button>
+  </nav>
+  <main class="ed">
+    <div class="eh"><span id="chip" class="chip"></span><span id="meta"></span></div>
+    <textarea id="data" spellcheck="false" autocapitalize="off" autocomplete="off" placeholder="Paste UFC data here, or tap Export to read your current Facebook session."></textarea>
+  </main>
+  <footer class="sb dk"><span>Runs on this device only</span><span>by Allou Mohamed</span></footer>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<dialog id="dlg"></dialog>
+<script src="popup.js"></script>
+</body>
+</html>

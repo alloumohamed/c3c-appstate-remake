@@ -1,0 +1,104 @@
+:root{color-scheme:light dark;--bg:#f2f3f8;--sf:#fff;--ink:#12141c;--mute:#5e6577;--line:#dadde8;--br:#2b3de0;--onbr:#fff;--tint:#e5e8ff;--amb:#8a4b00;--ambbg:#ffefcf;--red:#c62828;--redbg:#fde8e8;--font:system-ui,-apple-system,"Segoe UI Variable Text","Segoe UI",Roboto,sans-serif;--mono:ui-monospace,"SF Mono","Cascadia Mono",Consolas,Menlo,monospace}
+@media(prefers-color-scheme:dark){:root{--bg:#0d0f17;--sf:#171a25;--ink:#eceef7;--mute:#9aa1b5;--line:#2b3042;--br:#8f9cff;--onbr:#0d1033;--tint:#242b6b;--amb:#ffc46b;--ambbg:#3a2a0c;--red:#ff8a80;--redbg:#3d1a1a}}
+*{box-sizing:border-box;margin:0}
+html,body{background:var(--bg);color:var(--ink);font:14px/1.4 var(--font);-webkit-tap-highlight-color:transparent}
+button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
+svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+i[data-i]{display:inline-flex}
+:focus-visible{outline:2px solid var(--br);outline-offset:2px}
+[data-layout=mobile] .dk,[data-layout=desktop] .mb{display:none!important}
+.app{display:flex;flex-direction:column}
+.bar{display:flex;align-items:center;gap:10px}
+.logo{width:28px;height:28px;border-radius:7px}
+.ttl{flex:1;min-width:0}
+h1{font-size:15px;font-weight:600}
+.bar p{font-size:12px;color:var(--mute)}
+.ib{width:34px;height:34px;border-radius:8px;display:grid;place-items:center;color:var(--mute)}
+.ib:hover{background:var(--line)}
+.ed{display:flex;flex-direction:column;flex:1;min-height:0}
+.eh{display:flex;align-items:center;gap:8px;color:var(--mute);font-size:12px}
+.chip{display:inline-flex;align-items:center;gap:5px;padding:2px 10px;border-radius:99px;background:var(--line);color:var(--mute);font-weight:600}
+.chip[data-k=json],.chip[data-k=b64]{background:var(--tint);color:var(--br)}
+.chip[data-k=enc]{background:var(--ambbg);color:var(--amb)}
+.chip[data-k=bad]{background:var(--redbg);color:var(--red)}
+.chip svg{width:13px;height:13px}
+textarea{flex:1;width:100%;resize:none;outline:0;border:1px solid var(--line);background:var(--sf);color:var(--ink);font:12px/1.55 var(--mono)}
+textarea:focus{border-color:var(--br)}
+.act button{display:flex;align-items:center;justify-content:center;gap:6px}
+.act .pri{background:var(--br);color:var(--onbr);font-weight:600}
+.act .tone{background:var(--tint);color:var(--br);font-weight:600}
+/* ---------- desktop: compact window with toolbar + status bar ---------- */
+[data-layout=desktop] body{width:440px;margin:0 auto}
+[data-layout=desktop] .app{height:560px}
+[data-layout=desktop] .bar{padding:9px 10px 9px 12px;background:var(--sf);border-bottom:1px solid var(--line)}
+[data-layout=desktop] .act{display:flex;gap:2px;padding:6px 8px;background:var(--sf);border-bottom:1px solid var(--line)}
+[data-layout=desktop] .act button{height:30px;padding:0 9px;border-radius:6px;font-size:13px}
+[data-layout=desktop] .act .sm{width:32px;padding:0;color:var(--mute)}
+[data-layout=desktop] .act .sm:hover{background:var(--line);color:var(--ink)}
+[data-layout=desktop] .act .pri{margin-right:4px}
+[data-layout=desktop] .act .pri:hover{filter:brightness(1.1)}
+[data-layout=desktop] .act .tone:hover{filter:brightness(.96)}
+[data-layout=desktop] .act .tone svg:last-child{width:14px;height:14px}
+[data-layout=desktop] .sep{width:1px;height:18px;background:var(--line);margin:0 6px;align-self:center}
+[data-layout=desktop] .act .lo{margin-left:auto;color:var(--red)}
+[data-layout=desktop] .sm .l{display:none}
+[data-layout=desktop] .ed{padding:10px 12px;gap:8px}
+[data-layout=desktop] textarea{border-radius:8px;padding:10px}
+[data-layout=desktop] .sb{display:flex;justify-content:space-between;padding:5px 12px;font-size:11.5px;color:var(--mute);background:var(--sf);border-top:1px solid var(--line)}
+/* ---------- mobile: large title, sheet-like editor, bottom dock ---------- */
+[data-layout=mobile] .app{min-height:100dvh}
+[data-layout=mobile] .bar{padding:calc(env(safe-area-inset-top) + 16px) 16px 8px;gap:12px}
+[data-layout=mobile] .logo{width:44px;height:44px;border-radius:13px}
+[data-layout=mobile] h1{font-size:24px;font-weight:700;letter-spacing:-.015em}
+[data-layout=mobile] .bar p{font-size:13px}
+[data-layout=mobile] .ib{width:46px;height:46px;border-radius:50%;background:var(--sf)}
+[data-layout=mobile] .ed{padding:8px 16px 16px}
+[data-layout=mobile] .eh{padding:6px 8px 10px;font-size:13px}
+[data-layout=mobile] textarea{min-height:40dvh;padding:18px;border-radius:26px;border-color:transparent;font-size:13px}
+[data-layout=mobile] .act{order:2;position:sticky;bottom:0;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:14px 16px calc(env(safe-area-inset-bottom) + 12px);background:var(--sf);border-radius:28px 28px 0 0;box-shadow:0 -1px 0 var(--line),0 -14px 30px rgba(0,0,0,.07)}
+[data-layout=mobile] .ed{order:1}
+[data-layout=mobile] .big{grid-column:span 2;height:54px;border-radius:18px;font-size:16px}
+[data-layout=mobile] .sm{flex-direction:column;height:58px;gap:3px;border-radius:16px;font-size:11.5px;color:var(--mute)}
+[data-layout=mobile] .sm:active,[data-layout=mobile] .big:active{transform:scale(.97)}
+/* ---------- dialogs / sheets ---------- */
+dialog{border:0;padding:0;background:var(--sf);color:var(--ink);max-width:none}
+dialog::backdrop{background:rgba(8,10,20,.45)}
+dialog.out{animation:out .14s forwards}
+.box{display:flex;flex-direction:column;gap:12px;padding:20px}
+.box h2{font-size:17px;font-weight:650}
+.box p{color:var(--mute)}
+.box input{font:inherit;height:44px;padding:0 12px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink)}
+.acts{display:flex;flex-direction:row-reverse;gap:8px}
+.btn{height:44px;padding:0 18px;border-radius:12px;background:var(--line);font-weight:600}
+.btn.p{background:var(--br);color:var(--onbr)}
+.btn.dg{background:var(--redbg);color:var(--red)}
+.it{display:flex;gap:14px;align-items:center;width:100%;padding:12px;border-radius:14px;text-align:left}
+.it:hover{background:var(--tint)}
+.it b{display:block;font-weight:600}
+.it small{color:var(--mute);font-size:12px}
+.it.dg{color:var(--red)}
+.ab{display:flex;align-items:center;gap:14px}
+.ab .logo{width:52px;height:52px;border-radius:15px}
+.fine{font-size:12px}
+[data-layout=desktop] dialog{margin:auto;width:340px;border:1px solid var(--line);border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.35);animation:pop .14s}
+[data-layout=desktop] .box input,[data-layout=desktop] .btn{height:32px;border-radius:6px}
+[data-layout=desktop] .btn{font-size:13px}
+[data-layout=desktop] dialog.menu{inset:auto;top:90px;left:96px;margin:0;width:230px;border-radius:8px}
+[data-layout=desktop] dialog.menu::backdrop{background:transparent}
+[data-layout=desktop] .menu .box{padding:5px;gap:0}
+[data-layout=desktop] .menu .hd{display:none}
+[data-layout=desktop] .it{padding:7px 10px;border-radius:6px;gap:10px}
+[data-layout=mobile] dialog{margin:auto 0 0;width:100%;max-height:92dvh;border-radius:28px 28px 0 0;padding-bottom:env(safe-area-inset-bottom);animation:up .28s cubic-bezier(.2,.8,.2,1)}
+[data-layout=mobile] .box::before{content:"";align-self:center;width:36px;height:4px;border-radius:2px;background:var(--line);margin:-10px 0 4px}
+[data-layout=mobile] .btn{flex:1;height:50px;border-radius:16px}
+[data-layout=mobile] .box input{height:50px;font-size:16px;border-radius:16px}
+.toast{position:fixed;left:50%;z-index:9;max-width:calc(100% - 32px);padding:10px 16px;border-radius:10px;background:var(--ink);color:var(--bg);font-weight:500;opacity:0;pointer-events:none;transform:translate(-50%,12px);transition:opacity .18s,transform .18s}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+.toast[data-k=err]{background:var(--red);color:var(--bg)}
+[data-layout=desktop] .toast{bottom:40px;font-size:13px}
+[data-layout=mobile] .toast{top:calc(env(safe-area-inset-top) + 12px);border-radius:16px;transform:translate(-50%,-12px)}
+[data-layout=mobile] .toast.on{transform:translate(-50%,0)}
+@keyframes up{from{transform:translateY(100%)}}
+@keyframes pop{from{opacity:0;transform:scale(.96)}}
+@keyframes out{to{opacity:0;transform:translateY(20px)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
